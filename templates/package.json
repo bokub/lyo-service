@@ -1,0 +1,7 @@
+{
+  "name": "${publishName}",
+  "description": "Browser-compatible version of ${name}",
+  "version": "${version}",
+  "license": "${typeof(license) === 'undefined' ? 'unknown' : license}",
+  "main": "${file}"
+}
