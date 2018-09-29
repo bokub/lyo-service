@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > .npmrc",
-    "deploy": "npm run now-prune && now -p -e NPM_TOKEN='@lyo-npm-token' && now alias",
+    "deploy": "npm run now-prune && now -p -e NPM_TOKEN=@lyo-npm-token && now alias",
     "dev": "micro-dev",
     "now-prune": "now rm lyo -y || true",
     "start": "micro",
