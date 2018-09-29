@@ -1,24 +1,39 @@
 const {log} = console;
-const parse = require('parse-package-name');
 const {send} = require('micro');
-const html = require('./lib/html');
+const validate = require('validate-npm-package-name');
 const compile = require('./lib/compile');
+const check = require('./lib/check');
+const html = require('./lib/html');
 
 module.exports = async (req, res) => {
 	if (req.url === '/') {
 		return html.index;
 	}
-	if (!req.url || req.url.indexOf('.') > -1 || req.url.indexOf('@lyo/') === 1) {
+	// Validate module name
+	const name = require('url').parse(req.url).pathname.substr(1);
+	if (!validate(name).validForNewPackages || req.url.indexOf('.') > -1 || name.indexOf('@lyo/') === 0) {
 		send(res, 404, html.error(req.url, 'Invalid package name'));
 		return;
 	}
 
+	// Check if module was already compiled
 	try {
-		const {name} = parse(req.url.substr(1).split('?')[0]);
-		const readme = await compile(name);
-		res.end(html.success(readme));
+		const result = await check(name);
+		if (result) {
+			return html.success(result);
+		}
 	} catch (err) {
-		log(`Cannot compile or publish ${req.url.substr(1)}`);
-		send(res, 500, html.error(req.url.substr(1), err));
+		log(`Cannot run checks on ${name}`);
+		send(res, 500, html.error(name, err));
+		return;
+	}
+
+	// Compile module
+	try {
+		const result = await compile(name);
+		return html.success(result);
+	} catch (err) {
+		log(`Cannot compile or publish ${name}`);
+		send(res, 500, html.error(name, err));
 	}
 };

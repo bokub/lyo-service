@@ -2,8 +2,9 @@
 
 A browser-compatible version of [${name}](https://www.npmjs.com/package/${name}) built automatically with [Lyo](https://github.com/bokub/lyo).
 
-[![Version](https://badgen.net/npm/v/${publishName})](https://www.npmjs.com/package/${publishName})
-[![Build](https://bokub.github.io/lyo/badge.svg)](https://www.npmjs.com/package/${publishName})
+[![Version](https://flat.badgen.net/npm/v/${publishName})](https://www.npmjs.com/package/${publishName})
+[![Build](https://bokub.github.io/lyo/badge-flat.svg)](https://www.npmjs.com/package/${publishName})
+[![Hits](https://data.jsdelivr.com/v1/package/npm/${publishName}/badge)](https://www.jsdelivr.com/package/npm/${publishName})
 
 ## Usage
 
