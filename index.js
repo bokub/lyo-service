@@ -1,4 +1,5 @@
 const {log} = console;
+const {parse} = require('url');
 const {send} = require('micro');
 const validate = require('validate-npm-package-name');
 const compile = require('./lib/compile');
@@ -10,7 +11,7 @@ module.exports = async (req, res) => {
 		return html.index;
 	}
 	// Validate module name
-	const name = require('url').parse(req.url).pathname.substr(1);
+	const name = parse(req.url).pathname.substr(1);
 	if (!validate(name).validForNewPackages || req.url.indexOf('.') > -1 || name.indexOf('@lyo/') === 0) {
 		send(res, 404, html.error(req.url, 'Invalid package name'));
 		return;

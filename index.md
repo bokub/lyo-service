@@ -1,13 +1,11 @@
-# Lyo service
+# Lyo
 
-> Lyo builder as a service
-
-Home of [lyo.now.sh](https://lyo.now.sh), a service that runs [Lyo](https://github.com/bokub/lyo) on npm modules and publishes the result.
+This automated bot can run [Lyo](https://github.com/bokub/lyo) on npm modules and publish them as browser-compatible libraries.
 
 
 ## Usage
 
-Visit `https://lyo.now.sh/<module>`
+Visit &nbsp; `https://lyo.now.sh/<module>`
 
 If the compilation succeeds, the result will be published automatically on [npm/lyo](https://www.npmjs.com/~lyo)
 
