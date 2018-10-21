@@ -1,5 +1,3 @@
-# Lyo
-
 This automated bot can run [Lyo](https://github.com/bokub/lyo) on npm modules and publish them as browser-compatible libraries.
 
 

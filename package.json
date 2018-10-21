@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "bokub",
   "dependencies": {
+    "finalhandler": "^1.1.1",
     "got": "^9.2.2",
     "indent-string": "^3.2.0",
     "latest-version": "^4.0.0",
@@ -12,9 +13,12 @@
     "micro": "^9.3.3",
     "npmi": "^4.0.0",
     "pify": "^4.0.0",
+    "router": "^1.3.3",
+    "serve-handler": "^5.0.5",
     "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "micro-dev": "^3.0.0",
     "now": "^11.4.6",
     "xo": "^0.23.0"
@@ -28,7 +32,7 @@
   "scripts": {
     "build": "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > .npmrc",
     "deploy": "npm run now-prune && now -p -e NPM_TOKEN=@lyo-npm-token && now alias",
-    "dev": "micro-dev",
+    "dev": "cross-env NODE_ENV=dev micro-dev",
     "now-prune": "now rm lyo -y || true",
     "start": "micro",
     "test": "xo"
