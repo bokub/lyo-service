@@ -18,6 +18,32 @@ body {
     margin: auto
 }
 
+.search {
+    text-align: center;
+    margin: 55px;
+}
+.search input {
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    padding: 5px;
+    font-size: 22px;
+    outline: none;
+    color: #333;
+    text-align: center;
+}
+.search button {
+    height: 40px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.search button > img {
+    height: 28px;
+    margin: -8px 10px;
+}
+
 a, a:hover, a:visited {
     text-decoration: none;
     color: #d14
@@ -35,15 +61,9 @@ blockquote {
 }
 
 @keyframes wave {
-    0%, 100% {
-        transform: rotate(0)
-    }
-    20%, 60% {
-        transform: rotate(-25deg)
-    }
-    40%, 80% {
-        transform: rotate(10deg)
-    }
+    0%, 100% {transform: rotate(0)}
+    20%, 60% {transform: rotate(-25deg)}
+    40%, 80% {transform: rotate(10deg)}
 }
 
 @media screen and (max-width: 1080px) {
