@@ -7,13 +7,15 @@ Home of [lyo.now.sh](https://lyo.now.sh), a service that runs [Lyo](https://gith
 
 ## Usage
 
-Visit `https://lyo.now.sh/<module>`
+Visit `https://lyo.now.sh`
+
+Search a npm module
 
 If the compilation succeeds, the result will be published automatically on [npm/lyo](https://www.npmjs.com/~lyo)
 
 
 ## Disclaimer
 
-The libraries published by this service are not checked or tested. They may be useless or not work at all.
+The code published by this service is not checked or tested. It may be useless or not work at all.
 
-Use these libraries at your own risk.
+Use at your own risk.

@@ -44,6 +44,18 @@ body {
     margin: -8px 10px;
 }
 
+.cta {
+    display: block;
+    margin: 45px auto 30px;
+    border: none;
+    padding: 10px;
+    outline: none;
+    background-color: #fd85a8;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 a, a:hover, a:visited {
     text-decoration: none;
     color: #d14
