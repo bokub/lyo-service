@@ -1,5 +1,8 @@
 # Lyo service
 
+![Compiled](https://flat.badgen.net/runkit/npm-user-packages-counter-1vlfkqk9ojcx/lyo)
+![Uptime](https://flat.badgen.net/uptime-robot/week/m781413459-2970b77642fe1760dcc21e4c)
+
 > Lyo builder as a service
 
 Home of [lyo.now.sh](https://lyo.now.sh), a service that runs [Lyo](https://github.com/bokub/lyo) on npm modules and publishes the result.
