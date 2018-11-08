@@ -35,6 +35,14 @@
         </svg>
     </a>
 </div>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    hljs.initHighlightingOnLoad();
+
+    function lockCta() {
+        var cta = document.getElementById('cta');
+        cta.innerText = 'Please wait...';
+        cta.disabled = true;
+    }
+</script>
 </body>
 </html>
