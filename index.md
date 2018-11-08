@@ -7,7 +7,7 @@ This automated bot can run [Lyo](https://github.com/bokub/lyo) on npm modules an
 
 Enter the name of a npm module below, and press enter
 
-<form class="search" onsubmit="window.location.href = document.getElementById('n').value; return false">
+<form class="search" onsubmit="window.location.href = document.getElementById('n').value.replace('/', '%2F'); return false">
     <input type="text" id="n" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" required>
     <button type="submit"><img src="/static/search.svg"></button>
 </form>
