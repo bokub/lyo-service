@@ -1,6 +1,6 @@
 {
   "name": "lyo-service",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "bokub",
   "dependencies": {
     "finalhandler": "^1.1.1",
@@ -20,20 +20,14 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "micro-dev": "^3.0.0",
-    "now": "^11.4.6",
     "xo": "^0.23.0"
   },
   "license": "MIT",
   "main": "index.js",
-  "now": {
-    "name": "lyo",
-    "alias": "lyo"
-  },
   "scripts": {
     "build": "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > .npmrc",
-    "deploy": "now -p -e NPM_TOKEN=@lyo-npm-token && now alias && npm run now-prune",
+    "deploy": "now -p -e NPM_TOKEN=@lyo-npm-token && now alias && now rm lyo -s -y",
     "dev": "cross-env NODE_ENV=dev micro-dev --ignore .idea",
-    "now-prune": "now rm lyo --safe -y || true",
     "start": "micro",
     "test": "xo"
   },
