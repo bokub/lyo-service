@@ -1,5 +1,16 @@
 {
-  "name": "lyo",
-  "alias": "lyo",
-  "version": 1
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/:name",
+      "destination": "/api/compile"
+    },
+    {
+      "source": "/",
+      "destination": "/api/homepage"
+    }
+  ],
+  "env": {
+    "NPM_TOKEN": "@lyo-npm-token"
+  }
 }

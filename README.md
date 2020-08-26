@@ -1,7 +1,6 @@
 # Lyo service
 
 [![Compiled](https://flat.badgen.net/runkit/npm-user-packages-counter-1vlfkqk9ojcx/lyo)](https://www.npmjs.com/~lyo)
-![Uptime](https://flat.badgen.net/uptime-robot/week/m781413459-2970b77642fe1760dcc21e4c)
 
 > Lyo builder as a service
 
