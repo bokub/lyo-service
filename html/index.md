@@ -1,21 +1,13 @@
-This automated bot can run [Lyo](https://github.com/bokub/lyo) on npm modules and publish them as browser-compatible libraries.
+## What is this?
 
-[![Compiled](https://flat.badgen.net/runkit/npm-user-packages-counter-1vlfkqk9ojcx/lyo)](https://www.npmjs.com/~lyo)
-![Uptime](https://flat.badgen.net/uptime-robot/week/m781413459-2970b77642fe1760dcc21e4c)
+These are the remains of an automated bot which was able to run [Lyo](https://github.com/bokub/lyo) on npm modules and publish them as browser-compatible libraries.
 
-## Usage
+You can still see and use the [previously compiled modules](https://www.npmjs.com/~lyo)
 
-Enter the name of a npm module below, and press enter
+## Service shutdown
 
-<form class="search" onsubmit="window.location.href = document.getElementById('n').value.replace('/', '%2F'); return false">
-    <input type="text" id="n" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" required>
-    <button type="submit"><img src="/static/search.svg"></button>
-</form>
+This service was based on the **ZEIT Now 1.0 platform**, which was shut down **7th of august 2020**.
 
-If the compilation succeeds, the result will be published automatically on [npm/lyo](https://www.npmjs.com/~lyo)
+**Now 2.0** (AKA Vercel) has too many limitations (no file system, duration limits...), making this service impossible to migrate.
 
-## Disclaimer
-
-The code published by this service is not checked or tested. It may be useless or not work at all.
-
-Use at your own risk.
+Thank you to everyone who enjoyed `lyo.now.sh` 👍

@@ -4,9 +4,9 @@ const {join} = require('path');
 const marked = require('marked');
 const template = require('lodash.template');
 
-module.exports = (req, res) => {
+module.exports = (request, response) => {
 	const indexTemplate = template(readFileSync(join(__dirname, '../html/index.html'), 'utf-8'), {imports: {marked}});
 	const indexReadme = readFileSync(join(__dirname, '../html/index.md'), 'utf-8');
-	res.setHeader('Content-Type', 'text/html; charset=utf-8');
-	res.send(indexTemplate({md: indexReadme}));
+	response.setHeader('Content-Type', 'text/html; charset=utf-8');
+	response.send(indexTemplate({md: indexReadme}));
 };
